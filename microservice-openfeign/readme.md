@@ -6,6 +6,7 @@ It consists of 2 simple services in the architecture.
 
 **Note:** This project is extended from base project.  
 **Note:** OpenFeign isn't in the Netflix OSS.  
+
 ---
 ### What is OpenFeign?
 Feign is a **declarative** web service client. It makes writing web service clients easier. It has pluggable annotation support including Feign annotations and JAX-RS annotations. Also supports pluggable encoders and decoders.  
