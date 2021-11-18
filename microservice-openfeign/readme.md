@@ -91,3 +91,5 @@ public interface AddressFeignClients {
     AddressResponse getById(@PathVariable long id);
 }
 ```
+
+### Next station ⏩⏩  &ensp;microservice-eureka
