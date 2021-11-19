@@ -1,6 +1,6 @@
 ## Microservice with Spring Cloud and Netflix Eureka
 This project is used for learning how to build microservice integrated with Eureka.  
-It consists of 2 simple services in the architecture.
+It consists of 3 simple services in the architecture.
 1. Address Service
 2. Student Service (with OpenFeign)
 3. Eureka Server  
