@@ -44,7 +44,7 @@ pom.xml
 </dependencies>
 ```
 
-AddressServiceLoadBalancerConfig.java
+AddressServiceLoadBalancerConfig.java  (student-service)
 ```
 @LoadBalancerClient(value = "address-service")
 public class AddressServiceLoadBalancerConfig {
