@@ -12,7 +12,7 @@
 	<artifactId>address-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>address-service</name>
-	<description>Learn Microservice with OpenFeign</description>
+	<description>Learn Microservice with Spring Cloud</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>

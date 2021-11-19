@@ -12,7 +12,7 @@
 	<artifactId>student-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>student-service</name>
-	<description>Learn Microservice with Eureka server</description>
+	<description>Learn Microservice with Spring Cloud</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>2020.0.4</spring-cloud.version>
