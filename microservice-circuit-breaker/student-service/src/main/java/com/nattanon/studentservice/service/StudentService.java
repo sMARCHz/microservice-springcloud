@@ -8,6 +8,7 @@ import com.nattanon.studentservice.response.AddressResponse;
 import com.nattanon.studentservice.response.StudentResponse;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -16,7 +17,7 @@ public class StudentService {
     @Autowired
     private StudentRepository studentRepository;
     @Autowired
-    private AddressFeignClients addressFeignClients;
+    private CommonService commonService;
 
     public StudentResponse createStudent(CreateStudentRequest createStudentRequest) {
         Student student = new Student();
@@ -27,23 +28,14 @@ public class StudentService {
         studentRepository.save(student);
 
         StudentResponse studentResponse = new StudentResponse(student);
-        studentResponse.setAddress(getAddressById(student.getAddressId()));
+        studentResponse.setAddress(commonService.getAddressById(student.getAddressId()));
         return studentResponse;
     }
 
     public StudentResponse getById(long id) {
         Student student = studentRepository.getById(id);
         StudentResponse studentResponse = new StudentResponse(student);
-        studentResponse.setAddress(getAddressById(student.getAddressId()));
+        studentResponse.setAddress(commonService.getAddressById(student.getAddressId()));
         return studentResponse;
-    }
-
-    @CircuitBreaker(name = "addressService", fallbackMethod = "fallbackGetAddressById")
-    private AddressResponse getAddressById(long addressId) {
-        return addressFeignClients.getById(addressId);
-    }
-
-    private AddressResponse fallbackGetAddressById(long addressId, Throwable th) {
-        return new AddressResponse();
     }
 }
