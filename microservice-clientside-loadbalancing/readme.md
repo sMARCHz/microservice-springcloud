@@ -57,4 +57,6 @@ public class AddressServiceLoadBalancerConfig {
 }
 ```
 
+!!! Need to run 2 instance of address-service for testing load balancing
+
 ### Next station ⏩⏩  microservice-api-gateway
