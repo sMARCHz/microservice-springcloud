@@ -15,7 +15,7 @@ public class StudentController {
 
     @PostMapping("/create")
     public StudentResponse createStudent(@RequestBody CreateStudentRequest createStudentRequest) {
-        return studentService.createAddress(createStudentRequest);
+        return studentService.createStudent(createStudentRequest);
     }
 
     @GetMapping("/getById/{id}")
