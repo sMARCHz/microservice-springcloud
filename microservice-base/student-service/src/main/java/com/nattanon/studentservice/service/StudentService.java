@@ -18,7 +18,7 @@ public class StudentService {
     @Autowired
     private WebClient webClient;
 
-    public StudentResponse createAddress(CreateStudentRequest createStudentRequest) {
+    public StudentResponse createStudent(CreateStudentRequest createStudentRequest) {
         Student student = new Student();
         student.setFirstName(createStudentRequest.getFirstName());
         student.setLastName(createStudentRequest.getLastName());
